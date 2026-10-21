@@ -1,0 +1,50 @@
+# ADFSE: one common cluster count c for all datasets; five seeds (42-46).
+datasets:
+- AIDS-521
+- Bands-6
+- Campaign
+- Chess-227
+- Fault-12
+- Glass-14
+- Ionosphere-18
+- Landsat-19
+- Letter-20
+- Lymphography
+- Mnist-24
+- Monks-4
+- NHANES-364
+- Optdigits-26
+- Pendigits-28
+- Satellite-30
+- SpamBase-56
+- Stamps-37
+- TicTacToe-54
+- Vowels
+- Waveform-41
+- Wine
+- Yeast-47
+- Zoo
+seeds:
+- 42
+- 43
+- 44
+- 45
+- 46
+c: 16
+model_config:
+  dataset_name: Chess-227
+  data_dir: Data
+  seed: 42
+  hidden_dims:
+  - 128
+  - 128
+  latent_dim: 16
+  batch_size: 128
+  epochs: 50
+  lr: 0.01
+  weight_decay: 0.0
+  fuzzifier: 1.3
+  position_loss_weight: 1.0
+  fcm_max_iter: 4000
+  fcm_tol: 0.0001
+  device: auto
